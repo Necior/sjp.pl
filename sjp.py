@@ -26,7 +26,7 @@ def getDefinition(word):
 	# checks if definition is in dictionary:
 	if soup.find_all('span', style="color: #e00;"):
 	  print("[Error] \"" + word + "\" not found")
-	  sys.exit()
+	  sys.exit(1)
 
 	# definition is in dictionary, continue:
 	ex = soup.find_all('p', style="margin-top: .5em; font-size: medium; max-width: 30em; ")[0]
