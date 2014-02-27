@@ -18,7 +18,7 @@ def printVersionInfo():
 	print(versionMsg)
 
 def getDefinition(word):
-	url = 'http://sjp.pl/' + word
+	url = 'http://sjp.pl/' + urllib.parse.quote(word)
 	html = urllib.request.urlopen(url).read()
 
 	soup = BeautifulSoup(html)
