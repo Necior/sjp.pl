@@ -12,9 +12,11 @@ pip install -r requirements.txt
 
 ## Usage
 
-	sjp.py <word>
-	sjp.py (-h | --help | /?)
-	sjp.py (-v | --version)
+```
+sjp.py <word>
+sjp.py (-h | --help | /?)
+sjp.py (-v | --version)
+```
 
 ## Dependencies
 
