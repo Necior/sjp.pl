@@ -29,7 +29,7 @@ def getDefinition(word):
 	  sys.exit(1)
 
 	# definition is in dictionary, continue:
-	ex = soup.find_all('p', style="margin-top: .5em; font-size: medium; max-width: 30em; ")[0]
+	ex = soup.find_all('p', style="margin-top: .5em; font-size: medium; max-width: 32em; ")[0]
 	return ex.contents[0::2] # returns a list of lines of definition
 
 def main():
