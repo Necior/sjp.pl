@@ -22,7 +22,11 @@ def printVersionInfo():
 
 def getDefinition(word):
     url = 'http://sjp.pl/' + urllib.parse.quote(word)
-    html = urllib.request.urlopen(url).read()
+    try:
+        html = urllib.request.urlopen(url).read()
+    except urllib.error.URLError:
+        print("[Error] Can't connect to the service")
+        sys.exit(2)
 
     soup = BeautifulSoup(html)
 
