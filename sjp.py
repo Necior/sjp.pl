@@ -45,18 +45,18 @@ def getDefinition(word):
 
 
 def main():
-    if len(sys.argv) > 1:
-        if sys.argv[1] in ["-h", "--help", "/?"]:
-            printUsageInfo()
-            sys.exit()
-        elif sys.argv[1] in ["-v", "--version"]:
-            printVersionInfo()
-            sys.exit()
-        else:
-            print('\n'.join(getDefinition(sys.argv[1])))
-    else:
+    if len(sys.argv) <= 1:
         printUsageInfo()
         sys.exit()
+    if sys.argv[1] in ("-h", "--help", "/?"):
+        printUsageInfo()
+        sys.exit()
+    elif sys.argv[1] in ("-v", "--version"):
+        printVersionInfo()
+        sys.exit()
+    else:
+        print('\n'.join(getDefinition(sys.argv[1])))
+
 
 if __name__ == "__main__":
     main()
