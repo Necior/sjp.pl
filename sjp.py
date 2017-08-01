@@ -16,8 +16,7 @@ def print_usage_info():
 
 
 def print_version_info():
-    versionMsg = "sjp.py " + str(version)
-    print(versionMsg)
+    print('sjp.py {}'.format(version))
 
 
 def get_definition(word):
