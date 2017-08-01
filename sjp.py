@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 version = 0.01
 
 
-def printUsageInfo():
+def print_usage_info():
     helpMsg = """Usage:
     sjp.py <word>
     sjp.py (-h | --help | /?)
@@ -15,12 +15,12 @@ def printUsageInfo():
     print(helpMsg)
 
 
-def printVersionInfo():
+def print_version_info():
     versionMsg = "sjp.py " + str(version)
     print(versionMsg)
 
 
-def getDefinition(word):
+def get_definition(word):
     url = 'http://sjp.pl/' + urllib.parse.quote(word)
     try:
         html = urllib.request.urlopen(url).read()
@@ -46,16 +46,16 @@ def getDefinition(word):
 
 def main():
     if len(sys.argv) <= 1:
-        printUsageInfo()
+        print_usage_info()
         sys.exit()
     if sys.argv[1] in ("-h", "--help", "/?"):
-        printUsageInfo()
+        print_usage_info()
         sys.exit()
     elif sys.argv[1] in ("-v", "--version"):
-        printVersionInfo()
+        print_version_info()
         sys.exit()
     else:
-        print('\n'.join(getDefinition(sys.argv[1])))
+        print('\n'.join(get_definition(sys.argv[1])))
 
 
 if __name__ == "__main__":
