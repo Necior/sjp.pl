@@ -1,5 +1,7 @@
 # sjp.py
 
+**Note**: project is currently under heavy development.
+
 Word definition extractor from website SJP.pl which is a popular polish dictionary. Written in Python 3. Uses BeautifulSoup library.
 
 ## Installation
