@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import urllib.request  # to download HTML source
-import sys  # to access CLI arguments and to use exit codes
-from bs4 import BeautifulSoup  # to parse HTML source
+import urllib.request
+import sys
+from bs4 import BeautifulSoup
 
 version = 0.01
 
